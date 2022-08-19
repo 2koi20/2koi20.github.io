@@ -14,6 +14,32 @@ function classOff(elem,cls) {
     }
 }   
 
+
+function sliderX() {
+    var lefty = document.querySelector(':root');
+    
+    switch (indice) {
+    case 1:
+        lefty.style.setProperty('--spindex', '3%')
+        break;
+    case 2:
+        lefty.style.setProperty('--spindex', '17%')
+        break;
+    case 3:
+        lefty.style.setProperty('--spindex', '36.8%')
+        break;
+    case 4:
+        lefty.style.setProperty('--spindex', '49.5%')
+        break;
+    case 5:
+        lefty.style.setProperty('--spindex', '68%')
+        break;
+    case 6:
+        lefty.style.setProperty('--spindex', '80%')
+        break;
+    }
+}
+
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
 
@@ -31,6 +57,7 @@ async function cycle(index) {
             classOff(("Box"+(indice-1)), 'closed');
             indice -= 1;
         }
+        sliderX();
         timerActivity = true;
         await timer(500);
     }
@@ -55,7 +82,7 @@ async function nexty(elm) {
                 classOff(("Box"+(indice-1)), 'closed');
                 indice -= 1;
             }
-            
+            sliderX();
             await timer(500);
         }
     }
@@ -72,14 +99,14 @@ async function nexty(elm) {
                 classOff(("Box"+(indice-1)), 'closed');
                 indice -= 1;
             }
-            timerActivity = true
+            sliderX();
+            timerActivity = true;
             await timer(500);
         }
     }
         timerActivity = false;
     }
 }
-
 
         //future khoi, if mr.ben-yaakov asks about RegExp, it make a regular expression literal which is used to see if the string matches the classname, so overall if the class added/removed is already there.
 

@@ -82,11 +82,11 @@
                    My teammate and I are both on FRC Team 5417, and our robots cart, as well as the robot itself, is very plain, so we decided to spruce it up with an led matrix display, however we wanted to be able to easily switch it to display things such as alliance color and our logo. Because of this we decided to use an led matrix, and write some code to make it less labor intensive to convert bitmaps into instructions for the matrix.
                </p>
                <h2>code, and how it works</h2>
-               <img src="https://user-images.githubusercontent.com/70545101/167727406-e5dc6e6e-b249-41cd-a22b-b519a555db75.png" alt="Python Code/Bitmap Converter">
+               <img style="width:90%;" src="https://user-images.githubusercontent.com/70545101/167727406-e5dc6e6e-b249-41cd-a22b-b519a555db75.png" alt="Python Code/Bitmap Converter">
                <p>
                    This python script takes a bitmap image (in this case pxartT.bmp) and iterates through the bitmap using a for loop to iterate through the y-coordinates, printing arduino led commands as it goes. As it loops it increases the led index (z), and when each column of y coordinates ends, the for loop it is nested inside shifts the x-coordinate and reverses the direction of the change in y-coordinates to imitate the snake-like pattern of the led matrix.
                </p>
-               <img src="https://user-images.githubusercontent.com/70545101/167727406-e5dc6e6e-b249-41cd-a22b-b519a555db75.png">
+               <img style="width:90%;" src="https://user-images.githubusercontent.com/70545101/167726875-4468b174-61cc-4e6a-baa4-bbccfff29a41.png">
                <p>
                    After the python script is run, it echoes the led arduino commands to the shell, which is then copied into the template shown above, and pushed to the arduino.
                </p>
