@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href = "index.css" rel = "stylesheet" type = "text/css"/>
+        <script src="script.js">
+        </script>
+    <head>
+    <header>
+        <nav style="position: 'fixed';color: #949494; left: 20px; text-align: left;font-family:Verdana, Geneva, Tahoma, sans-serif;">khoi's digital portfolio</nav>
+        <nav>
+            <a onclick="cycle(1)">home</a>
+            <a onclick="cycle(2)">about me</a>
+            <a onclick="cycle(3)">why?</a>
+            <a onclick="cycle(4)">comp sci</a>
+            <a onclick="cycle(5)">isps</a>
+            <a onclick="cycle(6)">robotics prac</a>
+            <div id="indicator"></div>
+
+        </nav>
+
+    <body>
+       
+       <header>
+           <div class="centralBox" onclick="nexty(1)" id="Box1" >
+               <h1>
+                   khoi pham
+               </h1>
+               <p>
+                   <br>
+                   Hello, I am Khoi Pham, and this is my digital portfolio!<br><br>To navigate the page, either use the upper menu tabs, or click on the pages to the right. <br><br> (this page is a work in progress, so check in later to see wassup)
+
+               </p>
+
+           </div>
+           <div class="centralBox setup" onclick="nexty(2)" id="Box2" >
+               <h1>
+                   about me
+               </h1>
+               <p>
+                   Hello! Thanks for checking out my digital portfolio! <br><br>I am an Allen high School Senior, and part of the Allen robotics team. <br><br> Currently pursuing a career in Mechanical Engineering, and like to do some machining on the side. <br><br> Proficient in CAD modeling, certified in SolidEdge as an Associate and Professional, as well as proficient in Solidworks. (cad pics hopefully soon to come) <br><br> <b>email: koidabaws@gmail.com</b> <br>
+               </p>
+               <a style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;" href="https://docs.google.com/document/d/1zQkd1SvKGmnTRhZ1VEjkirN6zslw5_dDNElaaIDbuD8/edit?usp=sharing">resume</a>
+               <p>
+                  <b>recent works:</b>
+                  <br>currently working on electric rollerblades
+               </p>
+           </div>
+           <div class="centralBox setup" onclick="nexty(3)" id="Box3" >
+               <h1>why make a portfolio?</h1>
+               <p>
+                   A digital portfolio is a great way to show off to employers and colleges your significant achievements!<br>Personally, I think this is a good place to share things I am proud of, and generally have a place to put important information about me. Not only will I be able to use this to show potential employers, but also use this to help introduce myself to coworkers.
+           </div>
+           <div class="centralBox setup" onclick="nexty(4)" id="Box4" >
+               <h1>computer science 1</h1>
+               <p>
+                   In this course we learn about the basics of computer architechture, and introduce programming and computer science through learning the basics of swift. This course provides the foundational programming experience which the next classes build off of.
+               </p>
+               <h1>computer science 2</h1>
+               <p>
+                   This course provides a deeper understanding of the concepts presented in cs1, and introduces topics such as object oriented programming, web apis, and HTTP request methods. This course has also taught me concepts such as recursion, and introduced html, css and js.
+               </p>
+           </div>
+
+           <div class="centralBox setup" onclick="nexty(5)" id="Box5" >
+               <h1>csii isp</h1>
+               <h2><br>concept</h2>
+               <p>
+                   The concept of this project was for us to be able to quickly and easily program any size led matrix to display an image.<br><br>
+               </p>
+               <h2>motivation</h2>
+               <p>
+                   My teammate and I are both on FRC Team 5417, and our robots cart, as well as the robot itself, is very plain, so we decided to spruce it up with an led matrix display, however we wanted to be able to easily switch it to display things such as alliance color and our logo. Because of this we decided to use an led matrix, and write some code to make it less labor intensive to convert bitmaps into instructions for the matrix.
+               </p>
+               <h2>code, and how it works</h2>
+               <img src="https://user-images.githubusercontent.com/70545101/167727406-e5dc6e6e-b249-41cd-a22b-b519a555db75.png" alt="Python Code/Bitmap Converter">
+               <p>
+                   This python script takes a bitmap image (in this case pxartT.bmp) and iterates through the bitmap using a for loop to iterate through the y-coordinates, printing arduino led commands as it goes. As it loops it increases the led index (z), and when each column of y coordinates ends, the for loop it is nested inside shifts the x-coordinate and reverses the direction of the change in y-coordinates to imitate the snake-like pattern of the led matrix.
+               </p>
+               <img src="https://user-images.githubusercontent.com/70545101/167727406-e5dc6e6e-b249-41cd-a22b-b519a555db75.png">
+               <p>
+                   After the python script is run, it echoes the led arduino commands to the shell, which is then copied into the template shown above, and pushed to the arduino.
+               </p>
+               <h2>conclusion</h2>
+               <p>
+                   While the code and mechanics of the project were relatively simple, an unexpected challenge was debugging an issue we had, which was powering the entire 3 matrices, was the main issue. We eventually found out was due to a lack of memory in the arduinos, and was caused by our lack of knowledge in arduinos.
+           </div>
+
+           <div class="centralBox setup" onclick="nexty(6)" id="Box6" >wassup (home) <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+           </div>
+    </body>
+</html>
