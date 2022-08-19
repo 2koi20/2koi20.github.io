@@ -204,7 +204,7 @@ nav a:nth-child(6):hover ~ #indicator {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgba(240,240,240,1.0);
     transition: 800ms, z-index 0ms;
-    overflow-y: scroll;
+    overflow-y: hidden;
     z-index: 10;
 
 }
