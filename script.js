@@ -1,5 +1,25 @@
 var indice = 1;
 var timerActivity = false;
+function checkOverlap() {
+    var navvy = document.getElementById("topNav")
+    var titley = document.getElementById("title")
+
+
+
+    var navCoord = navvy.getBoundingClientRect().x;
+    var titleCoord = titley.getBoundingClientRect().x + titley.getBoundingClientRect().width;
+    if (navCoord < titleCoord) {
+        titley.style.transform = "translate(-100%, 0)"
+    } else {
+        titley.style.transform = "translate(0, 0)"
+    }
+
+}
+
+addEventListener('resize', (event) => {});
+
+onresize = (event) => {checkOverlap()};
+
 function classOn(elem,cls) {
     const elm = document.getElementById(elem);
     if (!(!!elm.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)')))) {

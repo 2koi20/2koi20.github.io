@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <link href = "index.css" rel = "stylesheet" type = "text/css"/>
+        
         <script src="script.js">
         </script>
     <head>
     <header>
-        <nav style="position: 'fixed';color: #949494; left: 20px; text-align: left;font-family:Verdana, Geneva, Tahoma, sans-serif;">khoi's digital portfolio</nav>
-        <nav>
+        <nav id="title" style="position: 'fixed';color: #949494; left: 20px; text-align: left;font-family:Verdana, Geneva, Tahoma, sans-serif;">khoi's digital portfolio</nav>
+        <nav id="topNav"  >
             <a onclick="cycle(1)">home</a>
             <a onclick="cycle(2)">about me</a>
             <a onclick="cycle(3)">why?</a>
@@ -19,16 +21,18 @@
         </nav>
 
     <body>
-       
+         
        <header>
-           <div class="centralBox" onclick="nexty(1)" id="Box1" >
+           
+           <div class="centralBox" onclick="nexty(1)" id="Box1" onload="checkOverlap()" >
                <h1>
-                   khoi pham
+                   khoi pham <i class=chevron-right></i>
                </h1>
                <p>
                    <br>
-                   Hello, I am Khoi Pham, and this is my digital portfolio!<br><br>To navigate the page, either use the upper menu tabs, or click on the pages to the right. <br><br> (this page is a work in progress, so check in later to see wassup)<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                   Hello, I am Khoi Pham, and this is my digital portfolio!<br><br>To navigate the page, either use the upper menu tabs, or click on the pages to the right. <br><br> (this page is a work in progress, so check in later to see wassup)
                </p>
+               <div  style="position:absolute;bottom:1%;left:20%; right:20%; text-align:center;"> 
                <h2>sources</h2>
                <p>
                    Navbar visual from <a href="https://codepen.io/himalayasingh/pen/OKOLEe">codepen<br></a>
@@ -40,8 +44,8 @@
                    Card transition loosely based on concept from <a href="https://jsfiddle.net/eYYkS/1/">jsfiddle</a>
 
                </p>
-
-           </div>
+               </div>
+               </div>
            <div class="centralBox setup" onclick="nexty(2)" id="Box2" >
                <h1>
                    about me
