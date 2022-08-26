@@ -35,6 +35,7 @@ function classOff(elem,cls) {
 }   
 
 
+
 function sliderX() {
     var lefty = document.querySelector(':root');
     
@@ -127,6 +128,12 @@ async function nexty(elm) {
         timerActivity = false;
     }
 }
+async function transition(link) {
+    classOff("Boxfing", "retrans");
+    classOn("Boxfing", "trans");
+    await timer(800);
+    window.location.href = "fingerprinting.html";
 
+}
         //future khoi, if mr.ben-yaakov asks about RegExp, it make a regular expression literal which is used to see if the string matches the classname, so overall if the class added/removed is already there.
 
