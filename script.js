@@ -1,4 +1,5 @@
 
+
 var indice = 1;
 var timerActivity = false;
 function checkOverlap() {
@@ -133,7 +134,7 @@ async function transition(link) {
     classOff("Boxfing", "retrans");
     classOn("Boxfing", "trans");
     await timer(800);
-    window.location.href = "fingerprinting.html";
+    window.location.href = "CS-III/Essays/fingerprinting.html";
 
 }
 
