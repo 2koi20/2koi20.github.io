@@ -28,7 +28,12 @@ nav {
     margin: 0 auto;
     font-weight: bold;
     align-items: right;
-    
+    color: #404040;
+    transition:0.2s;
+}
+
+nav:hover {
+    color: #949494;
 }
 
 nav a {
@@ -195,7 +200,7 @@ nav a:nth-child(6):hover ~ #indicator {
     right: 35%;
     top: 8%;
     width: 30%;
-    height: 80%;
+    /*height: 80%;*/
     border: 0px solid black;
     margin: 5px;
     padding: 0% 0%;

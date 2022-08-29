@@ -1,3 +1,4 @@
+
 var indice = 1;
 var timerActivity = false;
 function checkOverlap() {
@@ -134,6 +135,29 @@ async function transition(link) {
     await timer(800);
     window.location.href = "fingerprinting.html";
 
+}
+
+async function retransition(link) {
+    classOn("Boxfing", "closetrans")
+    await timer(800);
+    classOff("Boxfing", "closetrans");
+    classOn("Boxfing", "retrans");
+    
+    
+}
+
+function send(value, urly) {
+    var search = new URLSearchParams();
+    search.append("ID84", value);
+    location.href = urly + "?" + search.toString();
+}
+
+function recieve() {
+    var searchy = new URLSearchParams(window.location.search);
+    var pass = searchy.get("ID84")
+    if (pass = "close") {
+        retransition()
+    }
 }
         //future khoi, if mr.ben-yaakov asks about RegExp, it make a regular expression literal which is used to see if the string matches the classname, so overall if the class added/removed is already there.
 

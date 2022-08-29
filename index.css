@@ -220,24 +220,35 @@ nav a:nth-child(6):hover ~ #indicator {
     opacity:50%;
     transform:scale(0.4, 0.5) translate(-200%, 40%);
     z-index: -10;
+    transition: 800ms, z-index 0ms;
 }
 
 .centralBox.setup {
     opacity:50%;
     transform:scale(0.4, 0.5) translate(200%, 40%);
     z-index: -10;
+    transition: 800ms, z-index 0ms;
     
 }
 .centralBox.trans {
     transition-timing-function: linear;
     transform:scale(3, 3) translate(0);
     z-index: 10;
+    transition: 800ms, z-index 0ms;
     
 }
 .centralBox.retrans {
     padding: .8rem 2rem;
     transform:scale(.9, 1) translate(0, 107%);
     z-index: 120;
+    transition: 800ms, z-index 0ms;
+    
+}
+.centralBox.closetrans {
+    padding: .8rem 2rem;
+    transform:scale(3, 3) translate(0);
+    z-index: 120;
+    transition:0ms;
     
 }
 
