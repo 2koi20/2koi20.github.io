@@ -162,9 +162,9 @@ function send(value, urly) {
 
 function recieve() {
     var searchy = new URLSearchParams(window.location.search);
-    var pass = searchy.get("ID84")
+    var pass = searchy.get("ID84");
     if (pass != null) {
-        retransition()
+        retransition();
     }
 }
         //future khoi, if mr.ben-yaakov asks about RegExp, it make a regular expression literal which is used to see if the string matches the classname, so overall if the class added/removed is already there.
