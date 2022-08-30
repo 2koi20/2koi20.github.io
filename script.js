@@ -1,5 +1,8 @@
 
+$(window).on('load', function() {
+    $("#cover").hide();
 
+});
 var indice = 1;
 var timerActivity = false;
 function checkOverlap() {
@@ -167,6 +170,7 @@ function recieve() {
         retransition();
     }
 }
-window.onload = document.getElementById(cover).style.visibility = "hidden";
-        //future khoi, if mr.ben-yaakov asks about RegExp, it make a regular expression literal which is used to see if the string matches the classname, so overall if the class added/removed is already there.
+
+
+//future khoi, if mr.ben-yaakov asks about RegExp, it make a regular expression literal which is used to see if the string matches the classname, so overall if the class added/removed is already there.
 
