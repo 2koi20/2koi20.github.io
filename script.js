@@ -167,5 +167,6 @@ function recieve() {
         retransition();
     }
 }
+recieve();
         //future khoi, if mr.ben-yaakov asks about RegExp, it make a regular expression literal which is used to see if the string matches the classname, so overall if the class added/removed is already there.
 
