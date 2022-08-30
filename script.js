@@ -148,15 +148,22 @@ async function retransition(link) {
 }
 
 function send(value, urly) {
+    
     var search = new URLSearchParams();
     search.append("ID84", value);
-    location.href = urly + "?" + search.toString();
+    
+    if (location.href.match("codermerlin")) {
+        location.href = "/users/khoi-pham/Digital%20Portfolio/" + urly + "?" + search.toString();
+    } else {
+        location.href = "/" + urly + "?" + search.toString();
+    }
+
 }
 
 function recieve() {
     var searchy = new URLSearchParams(window.location.search);
     var pass = searchy.get("ID84")
-    if (pass = "close") {
+    if (pass != null) {
         retransition()
     }
 }
