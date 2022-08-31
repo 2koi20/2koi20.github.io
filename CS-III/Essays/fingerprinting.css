@@ -1,7 +1,8 @@
 
 :root {
     --spindex: 3%;
-    
+    --rotationF: 0deg;
+    --rotationA: 90deg;
 
 }
 
@@ -15,21 +16,23 @@ body {
     margin: 0;
     background-color: #292929;
     overflow: hidden;
-
+    align-items: center;
 }
 
 nav {
     position: fixed;
     top: 20px;
-    /*right: 20px;*/
-    /*width: 400px;*/
+    
+    left:50%;
+    width: fit-content;
     display: flow;
     margin: 0 auto;
     font-weight: bold;
-    align-items: right;
+    align-items: center;
     color: #404040;
     transition:0.2s;
     cursor: pointer;
+    transform: translate(-50%,0 );
 }
 
 nav:hover {
@@ -138,21 +141,22 @@ nav a:nth-child(6):after {
 }
 #indicator {
     position: absolute;
-    left: 1%;
+    left: 50%;
     top: 120%;
     bottom: 0;
     width: 50%;
     height: 3px;
     background: #606060;
     border-radius: 5px;
-    transition: 800ms ease;
+    transition: 400ms ease;
+    transform: translate(-50%,0);
     
 }
 
 nav:hover #indicator {
-    left: 25%;
+    
     background-color: #b7b7b7;
-    transform: scale(1.6, 1);
+    transform: translate(-50%,0) scale(1.6, 1);
 }
 
 nav a:hover {
@@ -204,23 +208,25 @@ nav a:nth-child(6):hover ~ #indicator {
     display: inline-block;
     position: fixed;
     top: 8%;
-    width: fit-content;
-    height:80%;
+    width: 61.93vh;
+    height:80vh;
     border: 0px solid black;
-    margin: 5px;
+    left: calc((100vw - 61.93vh)/2);
+    right:  calc((100vw - 61.93vh)/2);
     padding: 0% 0%;
     vertical-align: middle;
     text-align: center;
-    border-radius: 10%;
+    border-radius: 5%;
     box-sizing: border-box;
     font-family: arial;
     font-size: 11vw;
     background-color: rgba(240,240,240,1.0);
     transition: 800ms, z-index 0ms;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     scrollbar-width: none;
     z-index: 10;
-    transform: translate(-50%, 0);
+    
 }
 
 .centralBox::-webkit-scrollbar {
@@ -229,31 +235,26 @@ nav a:nth-child(6):hover ~ #indicator {
 
 .centralBox.closed {
     opacity:50%;
-    transform:scale(0.4, 0.5) translate(-350%, 40%);
+    transform:scale(0.4, 0.5) translate(-185%, 40%);
     z-index: -10;
 }
 
 .centralBox.setup {
     opacity:50%;
-    transform:scale(0.4, 0.5) translate(100%, 40%);
+    transform:scale(0.4, 0.5) translate(185%, 40%);
     z-index: -10;
     
 }
-.centralBox.trans {
-    transition-timing-function: linear;
-    transform:scale(3, 3) translate(0);
-    z-index: 10;
-    
-}
-.centralBox.retrans {
-    padding: .8rem 2rem;
-    transform:scale(.9, 1) translate(0, 107%);
-    z-index: 120;
+
+.centralBox.nextsay {
+    transform: rotateY(90deg) scale(.8,.8);
+
     
 }
 
 img {
     object-fit: cover;
+    top: -2.5%
 }
 /*//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css*/
 

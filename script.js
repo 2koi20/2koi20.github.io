@@ -4,6 +4,7 @@ $(window).on('load', function() {
 
 });
 var indice = 1;
+var toggled = false;
 var timerActivity = false;
 function checkOverlap() {
     var navvy = document.getElementById("topNav")
@@ -72,21 +73,21 @@ const timer = ms => new Promise(res => setTimeout(res, ms));
 async function cycle(index) {
     if (timerActivity == false) {
         timerActivity = true;
-    while (indice != index) {
-        if (indice < index) {
-            classOn(("Box"+indice), 'closed');
-            classOff(("Box"+(indice+1)), 'setup');
-            indice += 1;
+        while (indice != index) {
+            if (indice < index) {
+                classOn(("Box"+indice), 'closed');
+                classOff(("Box"+(indice+1)), 'setup');
+                indice += 1;
+            }
+            if (indice > index) {
+                classOn(("Box"+indice), 'setup');
+                classOff(("Box"+(indice-1)), 'closed');
+                indice -= 1;
+            }
+            sliderX();
+            timerActivity = true;
+            await timer(500);
         }
-        if (indice > index) {
-            classOn(("Box"+indice), 'setup');
-            classOff(("Box"+(indice-1)), 'closed');
-            indice -= 1;
-        }
-        sliderX();
-        timerActivity = true;
-        await timer(500);
-    }
         timerActivity = false;
     }
     
@@ -169,6 +170,84 @@ function recieve() {
     if (pass != null) {
         retransition();
     }
+}
+
+async function essaySwitch() {
+    if (toggled == false) {
+        $(".fingerprinting").toggleClass("nextsay");
+        await timer(800);
+        $(".ai").toggleClass("nextsay");
+        toggled = true;
+    } else {
+        $(".ai").toggleClass("nextsay");
+        await timer(800);
+        $(".fingerprinting").toggleClass("nextsay");
+        toggled = false;
+    }
+
+}
+
+async function nextEPage(elm) {
+    if (timerActivity == false) {
+        timerActivity = true;
+    var elem = document.getElementById("Box"+elm);
+    if (!!elem.className.match(new RegExp('(\\s|^)'+'setup'+'(\\s|$)'))) {
+        var index = indice + 1;
+        while (indice != index) {
+            if (indice < index) {
+                $((".Box"+indice)).addClass("closed");
+                $((".Box"+(indice+1))).removeClass("setup");
+                indice += 1;
+            }
+            if (indice > index) {
+                $(".Box"+indice).addClass("setup");
+                $(".Box"+(indice-1)).removeClass("closed");
+                indice -= 1;
+            }
+            sliderX();
+            await timer(500);
+        }
+    }
+    if (!!elem.className.match(new RegExp('(\\s|^)'+'closed'+'(\\s|$)'))) {
+        index = indice - 1;
+        while (indice != index) {
+            if (indice < index) {
+                $(".Box"+indice).addClass("closed");
+                $(".Box"+(indice+1)).removeClass("setup");
+                indice += 1;
+            }
+            if (indice > index) {
+                $(".Box"+indice).addClass("setup");
+                $(".Box"+(indice-1)).removeClass("closed");
+                indice -= 1;
+            }
+            sliderX();
+            await timer(500);
+        }
+    }
+        timerActivity = false;
+    }
+}
+async function cycleE(index) {
+    if (timerActivity == false) {
+        timerActivity = true;
+        while (indice != index) {
+            if (indice < index) {
+                $((".Box"+indice)).addClass("closed");
+                $((".Box"+(indice+1))).removeClass("setup");
+                indice += 1;
+            }
+            if (indice > index) {
+                $(".Box"+indice).addClass("setup");
+                $(".Box"+(indice-1)).removeClass("closed");
+                indice -= 1;
+            }
+            sliderX();
+            await timer(500);
+        }
+        timerActivity = false;
+    }
+    
 }
 
 
