@@ -6,16 +6,17 @@ $(window).on('load', function() {
 var indice = 1;
 var toggled = false;
 var timerActivity = false;
-function checkOverlap() {
+async function checkOverlap() {
     var navvy = document.getElementById("topNav")
     var titley = document.getElementById("title")
 
 
 
-    var navCoord = navvy.getBoundingClientRect().x;
-    var titleCoord = titley.getBoundingClientRect().x + titley.getBoundingClientRect().width;
-    if (navCoord < titleCoord) {
-        titley.style.transform = "translate(-100%, 0)"
+    var navCoord = navvy.getBoundingClientRect();
+    var titleCoord = titley.getBoundingClientRect();
+    
+    if ((navCoord.width + titleCoord.width + 50) >= window.innerWidth) {
+        titley.style.transform = "translate(-120%, 0)"
     } else {
         titley.style.transform = "translate(0, 0)"
     }
@@ -170,6 +171,7 @@ function recieve() {
     if (pass != null) {
         retransition();
     }
+    window.history.replaceState({}, document.title, window.location.href.split("?")[0])
 }
 
 async function essaySwitch() {
@@ -178,6 +180,7 @@ async function essaySwitch() {
         await timer(800);
         $(".ai").toggleClass("nextsay");
         toggled = true;
+        
     } else {
         $(".ai").toggleClass("nextsay");
         await timer(800);
@@ -250,6 +253,10 @@ async function cycleE(index) {
     
 }
 
-
+function checkSize() {
+    if (window.innerWidth <= window.innerHeight) {
+        $(".centralBox").css("max-width", "80%");
+    }
+}
 //future khoi, if mr.ben-yaakov asks about RegExp, it make a regular expression literal which is used to see if the string matches the classname, so overall if the class added/removed is already there.
 
