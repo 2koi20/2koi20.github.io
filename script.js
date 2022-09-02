@@ -139,7 +139,7 @@ async function transition(link) {
     classOff("Boxfing", "retrans");
     classOn("Boxfing", "trans");
     await timer(800);
-    window.location.href = "CS-III/Essays/fingerprinting.html";
+    window.location.href = "CS-III/Essays/Fingerprinting.html";
 
 }
 
