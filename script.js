@@ -175,17 +175,20 @@ function recieve() {
 }
 
 async function essaySwitch() {
-    if (toggled == false) {
+        if (toggled == false) {
         $(".fingerprinting").toggleClass("nextsay");
         await timer(800);
         $(".ai").toggleClass("nextsay");
         toggled = true;
+            window.history.replaceState({}, document.title, window.location.href.replace("Fingerprinting.html", "AI%20Sentience.html"));
         
     } else {
         $(".ai").toggleClass("nextsay");
         await timer(800);
         $(".fingerprinting").toggleClass("nextsay");
         toggled = false;
+        
+        window.history.replaceState({}, document.title, window.location.href.replace("AI%20Sentience.html", "Fingerprinting.html"));
     }
 
 }
