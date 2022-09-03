@@ -181,13 +181,13 @@ async function essaySwitch() {
         $(".ai").toggleClass("nextsay");
         toggled = true;
             window.history.replaceState({}, document.title, window.location.href.replace("Fingerprints.html", "AI%20Sentience.html"));
-        
+            document.title = "AI Sentience";
     } else {
         $(".ai").toggleClass("nextsay");
         await timer(800);
         $(".fingerprinting").toggleClass("nextsay");
         toggled = false;
-        
+        document.title = "Fingerprints";
         window.history.replaceState({}, document.title, window.location.href.replace("AI%20Sentience.html", "Fingerprints.html"));
     }
 
