@@ -139,7 +139,7 @@ async function transition(link) {
     classOff("Boxfing", "retrans");
     classOn("Boxfing", "trans");
     await timer(800);
-    window.location.href = "CS-III/Essays/Fingerprinting.html";
+    window.location.href = "CS-III/Essays/Fingerprints.html";
 
 }
 
@@ -180,7 +180,7 @@ async function essaySwitch() {
         await timer(800);
         $(".ai").toggleClass("nextsay");
         toggled = true;
-            window.history.replaceState({}, document.title, window.location.href.replace("Fingerprinting.html", "AI%20Sentience.html"));
+            window.history.replaceState({}, document.title, window.location.href.replace("Fingerprints.html", "AI%20Sentience.html"));
         
     } else {
         $(".ai").toggleClass("nextsay");
@@ -188,7 +188,7 @@ async function essaySwitch() {
         $(".fingerprinting").toggleClass("nextsay");
         toggled = false;
         
-        window.history.replaceState({}, document.title, window.location.href.replace("AI%20Sentience.html", "Fingerprinting.html"));
+        window.history.replaceState({}, document.title, window.location.href.replace("AI%20Sentience.html", "Fingerprints.html"));
     }
 
 }
