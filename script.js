@@ -25,7 +25,7 @@ async function checkOverlap() {
 
 addEventListener('resize', (event) => {});
 
-onresize = (event) => {checkOverlap()};
+onresize = (event) => {checkOverlap();checkTitle(); };
 
 function classOn(elem,cls) {
     const elm = document.getElementById(elem);
@@ -259,6 +259,16 @@ async function cycleE(index) {
 function checkSize() {
     if (window.innerWidth <= window.innerHeight) {
         $(".centralBox").css("max-width", "80%");
+    }
+}
+
+function checkTitle() {
+    var nav = document.getElementById("topNav");
+    if (nav.getBoundingClientRect().width > window.innerWidth) {
+        const ratio = window.innerWidth / nav.getBoundingClientRect().width / 1.2;
+        nav.style.transform = "scale(" + ratio + "," + ratio + ")";
+    } else {
+        nav.style.transform = "";
     }
 }
 //future khoi, if mr.ben-yaakov asks about RegExp, it make a regular expression literal which is used to see if the string matches the classname, so overall if the class added/removed is already there.
