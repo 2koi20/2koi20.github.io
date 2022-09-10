@@ -21,13 +21,21 @@
                  opacity: 1;
              }
          }
+         @keyframes fadeOutAnimation {
+             0% {
+                 opacity: 1;
+             }
+             100% {
+                 opacity: 0;
+             }
+         }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="../../script.js">
         </script>
     </head>
    
-    <body style="background-color: #f0f0f0; " onload="checkSize();">
+    <body id="hippy" style="background-color: #f0f0f0; " onload="checkSize();">
          
         <header>
             <nav id="title" onclick="send('ese', 'index.html')" style=" text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">back to home
