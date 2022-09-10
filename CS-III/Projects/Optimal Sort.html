@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fingerprinting</title>
+        <link href = "Optimal Sort.css" rel = "stylesheet" type = "text/css">
+        <style>
+         body {
+             animation: fadeInAnimation ease .5s;
+             animation-iteration-count: 1;
+             animation-fill-mode: forwards;
+         }
+         @keyframes fadeInAnimation {
+             0% {
+                 opacity: 0;
+             }
+             100% {
+                 opacity: 1;
+             }
+         }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../../script.js">
+        </script>
+    </head>
+   
+    <body style="background-color: #f0f0f0; " onload="checkSize();">
+         
+        <header>
+            <nav id="title" onclick="send('poj', 'index.html')" style=" text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">back to home
+                <div id="indicator"></div>
+            </nav>
+            
+        </header>
+           
+        <div class="centralBox fingerprinting Box1" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+            <h1>optimal sort</h1><br><br><h2>code can be found <a href="https://github.com/D3rpCookie/Optimal-Sortinghttps://github.com/D3rpCookie/Optimal-Sorting">here<br></a></h2>
+            
+        </div>
+        <div class="centralBox fingerprinting Box2 setup" onclick="nextEPage(2)" id="Box2" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+            <img style="width:100%;  top: 0; position: relative; " src="flowchartMerge.png" alt="flowchart">
+            
+        </div>
+
+           
+
+
+           
+
+           
+
+
+
+
+           
+    </body>
+</html>

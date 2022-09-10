@@ -1,21 +1,10 @@
 
-
 :root {
     --spindex: 3%;
-    
+    --rotationF: 0deg;
+    --rotationA: 90deg;
 
 }
-
-#cover {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top:0;
-    left: 0;
-    background: #fff;
-    z-index:9999;
-}
-
 
 body {
     
@@ -27,25 +16,33 @@ body {
     margin: 0;
     background-color: #292929;
     overflow: hidden;
-
+    align-items: center;
 }
 
 nav {
     position: fixed;
     top: 20px;
-    /*right: 20px;*/
-    right: 20px;
-    /*width: 400px;*/
+    
+    left:50%;
+    width: fit-content;
     display: flow;
     margin: 0 auto;
     font-weight: bold;
-    align-items: right;
-    white-space: nowrap;
+    align-items: center;
+    color: #404040;
+    transition:0.2s;
+    cursor: pointer;
+    transform: translate(-50%,0 );
 }
+
+nav:hover {
+    color: #949494;
+}
+
 
 nav a {
     position: relative;
-    width: fit-content;
+    
     /*width: 25%;*/
     display: inline-flow;
     text-align: center;
@@ -56,7 +53,6 @@ nav a {
     padding: 10px 20px;
     transition: 0.2s ease color;
     cursor: pointer;
-    
 }
 
 nav a:before, nav a:after {
@@ -145,15 +141,22 @@ nav a:nth-child(6):after {
 }
 #indicator {
     position: absolute;
-    left: var(--spindex);
+    left: 50%;
     top: 120%;
     bottom: 0;
-    width: 30px;
+    width: 50%;
     height: 3px;
-    background: #fff;
+    background: #606060;
     border-radius: 5px;
-    transition: 800ms ease left;
+    transition: 400ms ease;
+    transform: translate(-50%,0);
+    
+}
 
+nav:hover #indicator {
+    
+    background-color: #b7b7b7;
+    transform: translate(-50%,0) scale(1.6, 1);
 }
 
 nav a:hover {
@@ -204,21 +207,22 @@ nav a:nth-child(6):hover ~ #indicator {
 .centralBox {
     display: inline-block;
     position: fixed;
-    left: 15%;
-    right: 15%;
     top: 8%;
-    width: 70%;
-    height: 80%;
+    width: 61.93vh;
+    height:80vh;
     border: 0px solid black;
-    margin: 5px;
-    padding: 2rem 5rem;
+    left: calc((100vw - 61.93vh)/2);
+    right:  calc((100vw - 61.93vh)/2);
+    padding: 0% 0%;
     vertical-align: middle;
     text-align: center;
-    border-radius: 50px;
+    border-radius: 5%;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: arial;
+    font-size: 11vw;
     background-color: rgba(240,240,240,1.0);
     transition: 800ms, z-index 0ms;
+    overflow-x: hidden;
     overflow-y: scroll;
     scrollbar-width: none;
     z-index: 10;
@@ -231,47 +235,26 @@ nav a:nth-child(6):hover ~ #indicator {
 
 .centralBox.closed {
     opacity:50%;
-    transform:scale(0.4, 0.5) translate(-200%, 40%);
+    transform:scale(0.4, 0.5) translate(-185%, 40%);
     z-index: -10;
-    transition: 800ms, z-index 0ms;
 }
 
 .centralBox.setup {
     opacity:50%;
-    transform:scale(0.4, 0.5) translate(200%, 40%);
+    transform:scale(0.4, 0.5) translate(185%, 40%);
     z-index: -10;
-    transition: 800ms, z-index 0ms;
     
-}
-.centralBox.trans {
-    transition-timing-function: linear;
-    transform:scale(3, 3) translate(0);
-    z-index: 121;
-    transition: 800ms, z-index 0ms;
-    
-}
-.centralBox.retrans {
-    padding: .8rem 2rem;
-    transform:scale(.9, 1) translate(0, 107%);
-    z-index: 120;
-    
-    
-}
-.centralBox.closetrans {
-    padding: .8rem 2rem;
-    transform:scale(3, 3) translate(0);
-    z-index: 121;
-    transition:0ms;
-    
-}
-.centralBox.corner {
-    padding: .8rem 2rem;
-    transform:scale(.9, 1) translate(120%, 107%) rotate(-20deg);
-    z-index: 120;
-    
-    transform-origin: 0 0;
-
 }
 
+.centralBox.nextsay {
+    transform: rotateY(90deg) scale(.8,.8);
+
+    
+}
+
+img {
+    object-fit: cover;
+    top: -2.5%
+}
 /*//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css*/
 

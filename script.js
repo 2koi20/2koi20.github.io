@@ -135,19 +135,20 @@ async function nexty(elm) {
         timerActivity = false;
     }
 }
-async function transition(link) {
-    classOff("Boxfing", "retrans");
-    classOn("Boxfing", "trans");
+async function transition(link,id,cless) {
+    classOff(id, cless);
+    classOn(id, "trans");
     await timer(800);
-    window.location.href = "CS-III/Essays/Fingerprints.html";
+    window.location.href = link;
 
 }
 
-async function retransition(link) {
-    classOn("Boxfing", "closetrans")
+async function retransition(link, cless) {
+    classOff(link, "corner");
+    classOn(link, "closetrans");
     await timer(800);
-    classOff("Boxfing", "closetrans");
-    classOn("Boxfing", "retrans");
+    classOff(link, "closetrans");
+    classOn(link, cless);
     
     
 }
@@ -169,9 +170,14 @@ function recieve() {
     var searchy = new URLSearchParams(window.location.search);
     var pass = searchy.get("ID84");
     if (pass != null) {
-        retransition();
+        if (pass == "ese") {
+            retransition("Boxfing", "retrans");
+        }
+        if (pass == "poj") {
+            retransition("cornerBox", "corner");
+        }
     }
-    window.history.replaceState({}, document.title, window.location.href.split("?")[0])
+    /*window.history.replaceState({}, document.title, window.location.href.split("?")[0]);*/
 }
 
 async function essaySwitch() {
