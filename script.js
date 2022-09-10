@@ -153,8 +153,11 @@ async function retransition(link, cless) {
     
 }
 
-function send(value, urly) {
+async function send(value, urly) {
     
+    document.getElementById("hippy").style.animation="fadeOutAnimation ease .25s";
+    document.getElementById("hippy").style.opacity=0;
+    await timer(250);
     var search = new URLSearchParams();
     search.append("ID84", value);
     
