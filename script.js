@@ -177,7 +177,7 @@ function recieve() {
             retransition("cornerBox", "corner");
         }
     }
-    /*window.history.replaceState({}, document.title, window.location.href.split("?")[0]);*/
+    window.history.replaceState({}, document.title, window.location.href.split("?")[0]);
 }
 
 async function essaySwitch() {
