@@ -154,7 +154,6 @@ async function retransition(link, cless) {
 }
 
 async function send(value, urly) {
-    
     document.getElementById("hippy").style.animation="fadeOutAnimation ease .25s";
     document.getElementById("hippy").style.opacity=0;
     await timer(250);
@@ -169,15 +168,22 @@ async function send(value, urly) {
 
 }
 
-function recieve() {
+async function recieve() {
     var searchy = new URLSearchParams(window.location.search);
     var pass = searchy.get("ID84");
     if (pass != null) {
         if (pass == "ese") {
+            document.getElementById("cornerBox").style.zIndex=0;
             retransition("Boxfing", "retrans");
+            await timer(800);
+            document.getElementById("cornerBox").style.zIndex=100;
+            
         }
         if (pass == "poj") {
+            document.getElementById("Boxfing").style.zIndex=0;
             retransition("cornerBox", "corner");
+            document.getElementById("Boxfing").style.zIndex=120;
+            
         }
     }
     window.history.replaceState({}, document.title, window.location.href.split("?")[0]);
