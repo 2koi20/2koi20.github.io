@@ -6,8 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Optimal Sort</title>
-        <link rel="icon" type="image/png" href="../../favicon.png">
         <link href = "Optimal Sort.css" rel = "stylesheet" type = "text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <style>
          body {
              animation: fadeInAnimation ease .5s;
@@ -31,20 +31,70 @@
              }
          }
         </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="../../script.js">
+        
+        <script src="script.js">
         </script>
     </head>
    
-    <body id="hippy" style="background-color: #f0f0f0; " onload="checkSize();">
-         
+    <body id="hippy" onload="checkSize();">
+        <div class="aside-sticky">
+            
+            <div class="card-scene-wrapper" style="opacity: 1;">
+                <div class="card-scene" style="transform: rotateX(0.0827848rad) rotateY(-0.598887rad);">
+                    <div class="card-overlay" style="opacity: 0.95;">
+                        <div class="card-code" style="transform: translate3d(0px, -1380px, 0px);">
+                            <div class="card-code">
+                                <pre>  {
+    id: <span class="code-string">'ic_hiahsdfUNihkasdf879'</span>,
+    object: <span class="code-object">issuing_card</span>,
+    authorization_controls: {
+      allowed_categories: <span class="code-categories code-string" style="font-weight: 700;">['gas', 'parking']</span>,
+      blocked_categories: <span class="code-null code-blocked">null</span>,
+      currency: <span class="code-currency code-string" style="font-weight: 700;">'gbp'</span>,
+      max_amount: <span class="code-number code-amount" style="font-weight: 700;">10000</span>,
+      max_approvals: <span class="code-null">null</span>
+    },
+    billing: {
+      address: {
+        city: <span class="code-string">'beverly hills'</span>,
+        country: <span class="code-string">'US'</span>,
+        line1: <span class="code-string">'123 fake st'</span>,
+        line2: <span class="code-null">null</span>,
+        postal_code: <span class="code-number">90210</span>,
+        state: <span class="code-string">'CA'</span>
+      }
+    },
+    brand: <span class="code-string code-brand" style="font-weight: 700;">'mastercard'</span>,
+    cardholder: <span class="code-null">null</span>,
+    created: <span class="code-number">1528481070</span>,
+    currency: <span class="code-string">'usd'</span>,
+    exp_month: <span class="code-number">12</span>,
+    exp_year: <span class="code-number">2022</span>,
+    last4: <span class="code-number">1984</span>,
+    livemode: <span class="code-number">false</span>,
+    metadata: {
+    },
+    name: <span class="code-string">'Jenny Rosen'</span>,
+    shipping: <span class="code-null">null</span>,
+    status: <span class="code-string code-status" style="font-weight: 700;">'active'</span>,
+    type: <span class="code-string code-type" style="font-weight: 700;">'virtual'</span>
+  }
+                                </pre>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <canvas width="1200" height="1200" style="width: 600px; height: 600px;"></canvas></div>
+        </div>
         <header>
             <nav id="title" onclick="send('poj', 'index.html')" style=" text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">back to home
                 <div id="indicator"></div>
             </nav>
             
         </header>
-           
+        
         <div class="centralBox fingerprinting Box1" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
             <h1>optimal sort</h1><br><br><h2>code can be found <a href="https://github.com/D3rpCookie/Optimal-Sorting">here<br></a></h2>
             <h2>sheet can be found <a href="https://docs.google.com/spreadsheets/d/1Yr0YwUTdf1ldHUHlDQwzgGG5DAEai1TguglemLX4-Nw/edit?usp=sharing">here<br></a></h2>

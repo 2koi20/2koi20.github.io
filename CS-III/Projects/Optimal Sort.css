@@ -1,4 +1,5 @@
 
+
 :root {
     --spindex: 3%;
     --rotationF: 0deg;
@@ -14,9 +15,12 @@ body {
 
 body {
     margin: 0;
-    background-color: #292929;
+    background-color: grey;
     overflow: hidden;
     align-items: center;
+}
+body.transient {
+    background-image: linear-gradient(to right, grey, white)
 }
 
 nav {
@@ -257,4 +261,118 @@ img {
     top: -2.5%
 }
 /*//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css*/
+.aside-sticky, .card-scene { position: relative }
+
+.card-scene-wrapper {
+    -webkit-perspective: 997px;
+    perspective: 997px;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 300px);
+    -webkit-transform: translateZ(200px);
+        transform: translateZ(200px)
+
+}
+
+@media(min-width:880px) {
+        .card-scene-wrapper {
+            top: calc(50% - 350px);
+            left: calc(50% - 250px);
+            -webkit-perspective: 797px;
+            perspective: 797px;
+            -webkit-perspective: 977px;
+                    perspective: 977px
+                                     
+        }
+
+}
+
+.card-scene {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d
+
+}
+
+.card-overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 856px;
+    width: 885px;
+    height: 550px;
+    border-radius: 30px;
+    -webkit-transform: translate3D(-50%,-50%,2px) scale(.29);
+    transform: translate3D(-50%,-50%,2px) scale(.29);
+    -webkit-transition: all .5s cubic-bezier(.25,.46,.45,.94);
+    transition: all .5s cubic-bezier(.25,.46,.45,.94);
+    opacity: 0;
+    background-color: #32325d;
+    color: #fff;
+    font: 20px sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+        overflow: hidden
+
+}
+
+@media(min-width:420px) {
+        .card-overlay {
+            -webkit-transform: translate3D(-50%,-50%,2px) scale(.31);
+            transform: translate3D(-50%,-50%,2px) scale(.31);
+            -webkit-transform: translate3D(-50%,-50%,2px) scale(.37);
+                    transform: translate3D(-50%,-50%,2px) scale(.37)
+                                   
+        }
+
+}
+
+@media(min-width:670px) {
+        .card-overlay {
+            -webkit-transform: translate3D(-50%,-50%,2px) scale(.462);
+                    transform: translate3D(-50%,-50%,2px) scale(.462)
+                                   
+        }
+
+}
+
+.card-code pre {
+    position: relative;
+    top: 0;
+    left: 0;
+    line-height: 1.8;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    font-size: 30px
+    
+}
+
+.card-code pre .code-null, .card-code pre .code-number {
+    color: #fdbc72
+           
+}
+
+.card-code pre .code-string {
+    color: #74e4a2
+           
+}
+
+.card-code pre .code-object {
+    color: #7795f8
+           
+}
+
 
