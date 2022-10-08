@@ -294,19 +294,19 @@ async function recieve() {
 
 async function essaySwitch() {
         if (toggled == false) {
-        $(".fingerprinting").toggleClass("nextsay");
+        $(".optimalSort").toggleClass("nextsay");
         await timer(800);
-        $(".ai").toggleClass("nextsay");
+            $("body").addClass("toggled");
+        $(".sorties").toggleClass("nextsay");
         toggled = true;
-            window.history.replaceState({}, document.title, window.location.href.replace("Fingerprints.html", "AI%20Sentience.html"));
-            document.title = "AI Sentience";
+        document.title = "Sorts";
     } else {
-        $(".ai").toggleClass("nextsay");
+        $(".sorties").toggleClass("nextsay");
         await timer(800);
-        $(".fingerprinting").toggleClass("nextsay");
+        $("body").removeClass("toggled");
+        $(".optimalSort").toggleClass("nextsay");
         toggled = false;
-        document.title = "Fingerprints";
-        window.history.replaceState({}, document.title, window.location.href.replace("AI%20Sentience.html", "Fingerprints.html"));
+        document.title = "SortsOptimal Sort";
     }
 
 }

@@ -39,7 +39,6 @@ nav {
     display: flow;
     margin: 0 auto;
     font-weight: bold;
-    align-items: right;
     white-space: nowrap;
 }
 
@@ -47,7 +46,7 @@ nav a {
     position: relative;
     width: fit-content;
     /*width: 25%;*/
-    display: inline-flow;
+   
     text-align: center;
     color: #949494;
     text-decoration: none;
@@ -200,7 +199,10 @@ nav a:nth-child(6):hover ~ #indicator {
     background: linear-gradient(130deg, #ffa0c5, #c095e4);
 
 }
-
+.disabled {
+    pointer-events: none;
+    transition: 800ms !important;
+}
 .centralBox {
     display: inline-block;
     position: fixed;
@@ -218,7 +220,7 @@ nav a:nth-child(6):hover ~ #indicator {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgba(240,240,240,1.0);
-    transition: 800ms, z-index 0ms;
+    transition: 800ms;
     overflow-y: scroll;
     scrollbar-width: none;
     z-index: 10;
@@ -233,44 +235,70 @@ nav a:nth-child(6):hover ~ #indicator {
     opacity:50%;
     transform:scale(0.4, 0.5) translate(-200%, 40%);
     z-index: -10;
-    transition: 800ms, z-index 0ms;
+    transition: 800ms;
+}
+
+.centralBox.closed:hover {
+    transform:scale(0.43, 0.52) translate(-185%, 35%);
+    opacity:90%;
+    transition: 200ms;
 }
 
 .centralBox.setup {
     opacity:50%;
     transform:scale(0.4, 0.5) translate(200%, 40%);
     z-index: -10;
-    transition: 800ms, z-index 0ms;
+    transition: 800ms;
     
 }
+
+.centralBox.setup:hover {
+    transform:scale(0.43, 0.52) translate(185%, 35%);
+    opacity:90%;
+    transition: 200ms;
+}
+
 .centralBox.trans {
     transition-timing-function: linear;
     transform:scale(3, 3) translate(0);
     z-index: 121;
-    transition: 800ms, z-index 0ms;
+    transition: 800ms;
     
 }
+
 .centralBox.retrans {
     padding: .8rem 2rem;
     transform:scale(.9, 1) translate(0, 107%);
     z-index: 120;
+    transition: 200ms;
     
-    
+}
+.centralBox.retrans:hover {
+    transition-timing-function: linear;
+    transform:scale(1, 1.1) translate(0, 100%);
+    z-index: 120;
+    transition:200ms;
 }
 .centralBox.closetrans {
     padding: .8rem 2rem;
-    transform:scale(3, 3) translate(0);
+    transform:scale(3, 3) translate(0) !important;
     z-index: 121;
-    transition:0ms;
+    transition:0ms !important;
     
 }
 .centralBox.corner {
     padding: .8rem 2rem;
     transform:scale(.9, 1) translate(120%, 107%) rotate(-20deg);
     z-index: 100;
-    
+    transition: 200ms;
     transform-origin: 0 0;
 
+}
+.centralBox.corner:hover {
+    transform:scale(1, 1.1) translate(104%, 93%) rotate(-15deg);
+    transform-origin: 0 0;
+    transition: 200ms;
+    z-index: 0;
 }
 
 /*//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css*/

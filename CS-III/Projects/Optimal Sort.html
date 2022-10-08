@@ -37,6 +37,7 @@
     </head>
    
     <body id="hippy" onload="checkSize();">
+<!--
         <div class="aside-sticky">
             
             <div class="card-scene-wrapper" style="opacity: 1;">
@@ -88,19 +89,54 @@
                 
                 <canvas width="1200" height="1200" style="width: 600px; height: 600px;"></canvas></div>
         </div>
+-->
         <header>
             <nav id="title" onclick="send('poj', 'index.html')" style=" text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">back to home
                 <div id="indicator"></div>
             </nav>
-            
+            <nav id="switch" onclick="essaySwitch(); cycleE(1);" style="top: unset;bottom:5%; text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">switch projects
+                <div id="switchx"></div>
+            </nav>
         </header>
         
-        <div class="centralBox fingerprinting Box1" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+        <div class="centralBox optimalSort Box1" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
             <h1>optimal sort</h1><br><br><h2>code can be found <a href="https://github.com/D3rpCookie/Optimal-Sorting">here<br></a></h2>
-            <h1>sort timing</h1><br><br><h2>sheet can be found <a href="https://docs.google.com/spreadsheets/d/1Yr0YwUTdf1ldHUHlDQwzgGG5DAEai1TguglemLX4-Nw/edit?usp=sharing">here<br></a></h2>
+            <h2>sheet can be found <a href="https://docs.google.com/spreadsheets/d/1Yr0YwUTdf1ldHUHlDQwzgGG5DAEai1TguglemLX4-Nw/edit?usp=sharing">here<br></a></h2>
+        </div>
+        <div class="centralBox optimalSort Box2 setup" onclick="nextEPage(2)" id="Box2" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+            <img style="height:100%;  top: 0; position: relative; " src="merge sort flowchart.drawio.png" alt="flowchart">
             
         </div>
-        <div class="centralBox fingerprinting Box2 setup" onclick="nextEPage(2)" id="Box2" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+
+
+
+        <div class="centralBox sorties Box1 nextsay" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="color: #292929; background-color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+            
+            <h1>bubble sort</h1><br><br><h2>github <a href="https://github.com/2koi20/bubblesort">here<br></a></h2>
+            <h2>sheet can be found <a href="https://docs.google.com/spreadsheets/d/1nrQc6wkkn0zeEvmKO6jxBwihhyACoQkL5-fS4HElApU/edit?usp=sharing">here<br></a></h2>
+            
+        </div>
+        <div class="centralBox sorties Box2 setup nextsay" onclick="nextEPage(2)" id="Box2" onload="checkOverlap()" style="color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+            <img style="height:100%;  top: 0; position: relative; " src="merge sort flowchart.drawio.png" alt="flowchart">
+            
+        </div>
+
+        <div class="centralBox sorties Box3 setup nextsay" onclick="nextEPage(3)" id="Box3" onload="checkOverlap()" style="color: #292929; background-color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+            <h1>insertion sort</h1><br><br><h2>github <a href="https://github.com/2koi20/insertionsort">here<br></a></h2>
+            <h2>sheet can be found <a href="https://docs.google.com/spreadsheets/d/1OXB4Vf3gBCyyPXi1Qc4bvyXqTnxMzZMPV0rNpBP2umU/edit?usp=sharing">here<br></a></h2>
+            
+        </div>
+        <div class="centralBox sorties Box4 setup nextsay" onclick="nextEPage(4)" id="Box4" onload="checkOverlap()" style="-color: #292929; background-color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+            <img style="height:100%;  top: 0; position: relative; " src="merge sort flowchart.drawio.png" alt="flowchart">
+            
+        </div>
+
+        <div class="centralBox sorties Box5 setup nextsay" onclick="nextEPage(5)" id="Box5" onload="checkOverlap()" style="color: #292929; background-color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+            <h1>selection sort</h1><br><br><h2>github <a href="https://github.com/2koi20/selectionsort">here<br></a></h2>
+            <h2>sheet can be found <a href="https://docs.google.com/spreadsheets/d/17Bp3A1DhkoGIayqYlp12G7WQlpYIs6XDOUYWhSGczto/edit?usp=sharing">here<br></a></h2>
+            
+        </div>
+        <div class="centralBox sorties Box6 setup nextsay" onclick="nextEPage(6)" id="Box6" onload="checkOverlap()" style="color: #292929; background-color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
             <img style="height:100%;  top: 0; position: relative; " src="merge sort flowchart.drawio.png" alt="flowchart">
             
         </div>

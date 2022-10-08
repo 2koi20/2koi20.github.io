@@ -20,7 +20,7 @@ async function checkOverlap() {
     } else {
         titley.style.transform = "translate(0, 0)"
     }
-
+    lift();
 }
 
 addEventListener('resize', (event) => {});
@@ -93,6 +93,12 @@ async function cycle(index) {
     }
     
 }
+async function lift() {
+    $('#Box'+(indice+1)).css("z-index", "-1");
+    for (let i = indice+1; i < 7; i++) {
+        $('#Box'+(indice)).css("z-index", "-10");
+    }
+}
 async function nexty(elm) {
     if (timerActivity == false) {
         timerActivity = true;
@@ -101,39 +107,53 @@ async function nexty(elm) {
         var index = indice + 1;
         while (indice != index) {
             if (indice < index) {
-                classOn(("Box"+indice), 'closed');
+                classOn(("Box"+indice), 'closed disabled');
                 classOff(("Box"+(indice+1)), 'setup');
                 indice += 1;
+                sliderX();
+                await timer(500);
+                classOff(("Box"+(indice-1)), 'disabled');
+                
             }
             if (indice > index) {
-                classOn(("Box"+indice), 'setup');
+                classOn(("Box"+indice), 'setup disabled');
                 classOff(("Box"+(indice-1)), 'closed');
                 indice -= 1;
+                sliderX();
+                await timer(500);
+                classOff(("Box"+(indice+1)), 'disabled');
+                
             }
-            sliderX();
-            await timer(500);
+            
         }
     }
     if (!!elem.className.match(new RegExp('(\\s|^)'+'closed'+'(\\s|$)'))) {
         index = indice - 1;
         while (indice != index) {
             if (indice < index) {
-                classOn(("Box"+indice), 'closed');
+                classOn(("Box"+indice), 'closed disabled');
                 classOff(("Box"+(indice+1)), 'setup');
                 indice += 1;
+                sliderX();
+                await timer(500);
+                classOff(("Box"+(indice-1)), 'disabled');
             }
             if (indice > index) {
-                classOn(("Box"+indice), 'setup');
+                classOn(("Box"+indice), 'setup disabled');
                 classOff(("Box"+(indice-1)), 'closed');
                 indice -= 1;
+                sliderX();
+                await timer(500);
+                classOff(("Box"+(indice+1)), 'disabled');
+                
             }
-            sliderX();
-            timerActivity = true;
-            await timer(500);
+           
         }
     }
         timerActivity = false;
+
     }
+    lift();
 }
 async function transition(link,id,cless) {
     classOff(id, cless);
@@ -173,15 +193,20 @@ async function recieve() {
     var pass = searchy.get("ID84");
     if (pass != null) {
         if (pass == "ese") {
-            document.getElementById("cornerBox").style.zIndex=0;
+            document.getElementById("cornerBox").style.zIndex=-100;
             retransition("Boxfing", "retrans");
+            $("#Boxfing").addClass("disabled");
             await timer(800);
+            $("#Boxfing").removeClass("disabled");
             document.getElementById("cornerBox").style.zIndex=100;
             
         }
         if (pass == "poj") {
-            document.getElementById("Boxfing").style.zIndex=0;
+            document.getElementById("Boxfing").style.zIndex=-1000;
             retransition("cornerBox", "corner");
+            $("#cornerBox").addClass("disabled");
+            await timer(800);
+            $("#cornerBox").removeClass("disabled");
             document.getElementById("Boxfing").style.zIndex=120;
             
         }
@@ -198,6 +223,7 @@ async function essaySwitch() {
             window.history.replaceState({}, document.title, window.location.href.replace("Fingerprints.html", "AI%20Sentience.html"));
             document.title = "AI Sentience";
     } else {
+
         $(".ai").toggleClass("nextsay");
         await timer(800);
         $(".fingerprinting").toggleClass("nextsay");
