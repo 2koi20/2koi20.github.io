@@ -241,7 +241,7 @@ async function nexty(elm) {
 async function transition(link,id,cless) {
     classOff(id, cless);
     classOn(id, "trans");
-    await timer(800);
+    await timer(700);
     window.location.href = link;
 
 }
@@ -249,7 +249,7 @@ async function transition(link,id,cless) {
 async function retransition(link, cless) {
     classOff(link, "corner");
     classOn(link, "closetrans");
-    await timer(800);
+    await timer(700);
     classOff(link, "closetrans");
     classOn(link, cless);
     

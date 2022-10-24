@@ -228,8 +228,7 @@ nav a:nth-child(6):hover ~ #indicator {
     font-family: arial;
     font-size: 11vw;
     background-color: rgba(240,240,240,1.0);
-    transition: 700ms, z-index 0ms;
-    transition-timing-function: ease-out;
+    transition: 800ms, z-index 0ms;
     overflow-x: hidden;
     overflow-y: scroll;
     scrollbar-width: none;
@@ -256,7 +255,7 @@ nav a:nth-child(6):hover ~ #indicator {
 
 .centralBox.nextsay {
     transform: rotateY(90deg) scale(.8,.8);
-    transition-timing-function: ease-in;
+
     
 }
 
