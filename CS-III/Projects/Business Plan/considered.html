@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Optimal Sort</title>
+        <link href = "index.css" rel = "stylesheet" type = "text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+         body {
+             animation: fadeInAnimation ease .5s;
+             animation-iteration-count: 1;
+             animation-fill-mode: forwards;
+         }
+         @keyframes fadeInAnimation {
+             0% {
+                 opacity: 0;
+             }
+             100% {
+                 opacity: 1;
+             }
+         }
+         @keyframes fadeOutAnimation {
+             0% {
+                 opacity: 1;
+             }
+             100% {
+                 opacity: 0;
+             }
+         }
+        </style>
+        
+        <script src="script.js">
+        </script>
+    </head>
+   
+    <body id="hippy" onload="checkSize();">
+<!--
+        <div class="aside-sticky">
+            
+            <div class="card-scene-wrapper" style="opacity: 1;">
+                <div class="card-scene" style="transform: rotateX(0.0827848rad) rotateY(-0.598887rad);">
+                    <div class="card-overlay" style="opacity: 0.95;">
+                        <div class="card-code" style="transform: translate3d(0px, -1380px, 0px);">
+                            <div class="card-code">
+                                <pre>  {
+    id: <span class="code-string">'ic_hiahsdfUNihkasdf879'</span>,
+    object: <span class="code-object">issuing_card</span>,
+    authorization_controls: {
+      allowed_categories: <span class="code-categories code-string" style="font-weight: 700;">['gas', 'parking']</span>,
+      blocked_categories: <span class="code-null code-blocked">null</span>,
+      currency: <span class="code-currency code-string" style="font-weight: 700;">'gbp'</span>,
+      max_amount: <span class="code-number code-amount" style="font-weight: 700;">10000</span>,
+      max_approvals: <span class="code-null">null</span>
+    },
+    billing: {
+      address: {
+        city: <span class="code-string">'beverly hills'</span>,
+        country: <span class="code-string">'US'</span>,
+        line1: <span class="code-string">'123 fake st'</span>,
+        line2: <span class="code-null">null</span>,
+        postal_code: <span class="code-number">90210</span>,
+        state: <span class="code-string">'CA'</span>
+      }
+    },
+    brand: <span class="code-string code-brand" style="font-weight: 700;">'mastercard'</span>,
+    cardholder: <span class="code-null">null</span>,
+    created: <span class="code-number">1528481070</span>,
+    currency: <span class="code-string">'usd'</span>,
+    exp_month: <span class="code-number">12</span>,
+    exp_year: <span class="code-number">2022</span>,
+    last4: <span class="code-number">1984</span>,
+    livemode: <span class="code-number">false</span>,
+    metadata: {
+    },
+    name: <span class="code-string">'Jenny Rosen'</span>,
+    shipping: <span class="code-null">null</span>,
+    status: <span class="code-string code-status" style="font-weight: 700;">'active'</span>,
+    type: <span class="code-string code-type" style="font-weight: 700;">'virtual'</span>
+  }
+                                </pre>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <canvas width="1200" height="1200" style="width: 600px; height: 600px;"></canvas></div>
+        </div>
+-->
+        <header>
+            <nav id="title" onclick="send('poj', 'CS-III/Projects/Optimal Sort.html')" style=" text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">back to home
+                <div id="indicator"></div>
+            </nav>
+           
+        </header>
+        
+        <div class="centralBox optimalSort Box1" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="width:40%; left: calc((100vw - 40vw)/2); right:  calc((100vw - 40vw)/2);background-color: #fff; color: #292929; font-family: Arial; font-size: 11pt;padding: 1rem 2rem;" >
+            <h1>considered proposals</h1>
+            <p><h2>Jacob Jershin</h2> https://www.codermerlin.com/users/jacob-jershin/Digital%20Portfolio/CS-III/Projects/Business%20Plan/index.html<br>
+
+                The concept of a quick, light rendering software system seems cool and intriguing. I like how he seems passionate about the project, and he seems relatively knowledgeable about the topic, however It seems like a rather large undertaking, and I am also not the biggest fan of creating a 3-d test game, which seems like the part I would be working on were I to join his group.<br><br>
+
+                <h2>Reynard Gunawan</h2>
+                https://www.codermerlin.com/users/reynard-gunawan/Digital%20Portfolio/CS-II/Projects/Business%20Plan/index.html<br>
+
+                I lille the filter concept, and I think I would use it were it to be a real thing, however I think this would have to be picked up by multiple retailers in order to actually make it work. I think this concept would be a good tool, however it seems too logistically challenging and more corporate politics than actual programming.<br><br>
+
+                    <h2>Stefano Giron</h2>
+                https://www.codermerlin.com/users/stefano-giron/Digital%20Portfolio/CS-III/Projects/Business%20Plan/index.html<br>
+
+                Seems neat, and would be very useful to me, however I don't think it’s something I would want to develop. It seems like it would rely too much on things such as metadata or something like that in html or browsers if it were to be used by an actual person with limited scripting knowledge. If it doesn’t go that route, I think it will just end up competing with AutoHotkey.<br><br>
+
+                        <h2>Zaenb Al Ameri</h2>
+                https://www.codermerlin.com/users/zaenb-al-ameri/Digital%20Portfolio/CS-II/Projects/Business%20Plan/index.html<br>
+
+                This is a neat concept and it would be cool to autogenerate an outfit. I would assume it processes mostly on color and a description, like pulling a color from an image, and have metadata like “straight, jeans, 32x30” and generate from that. This is pretty neat and I would use it, but it seems kinda simple. Even the trends part seems rather simple as you could just pull from google trends or insta. Also the font choice hurts me inside.<br><br>
+
+                            <h2>David Ortega</h2>
+                https://www.codermerlin.com/users/david-ortega/Digital%20Portfolio/CS-II/Projects/Business%20Plan/index.html<br>
+
+                This seems kinda neat, and mental health is a good focus, however therapy seems like a rather personal thing, and I doubt people would feel super comfortable putting their personal lives/data into a sketchy app which lures in customers with fancy design and a cheerful mascot.<br><br>
+
+                                <h2>Connor Church</h2>
+                https://www.codermerlin.com/users/connor-church/Digital%20Portfolio/CS-II/Projects/Business%20Plan/index.html<br>
+
+                Programming a sleepy tracker based on eyes and face seem pretty neat and I would love to work on a project like that, but this seems like an inherently unusable concept, which would bother me if I actually put time and effort into it. Rather than facial recognition, sleep is much easier tracked by heart rate, which would be a dead simple design, and would be pretty boring, as well as walking pretty well trodden ground by this point.<br><br>
+
+                    <h2>Dylan Pettijohn</h2>
+                https://www.codermerlin.com/users/dylan-pettijohn/Digital%20Portfolio/CS-II/Projects/Business%20Plan/index.html<br>
+
+                While the concept is pretty sound, and RFID is really neat stuff,I am inherently opposed to further restriction on entry to the school. I think it would create slower foot traffic than necessary, and be easily faked by some dude making RFID tags from home copying ID’s. Seems kinda pointless then as we would need Security guards anyways in order to see if people are faking stuff.<br><br>
+
+                    <h2>Evan Bowerman</h2>
+                https://www.codermerlin.com/users/evan-bowerman/Digital%20Portfolio/CS-II/Projects/Business%20Plan/index.html<br>
+
+                I think it is important to support extracurriculars, however I think its kinda unfortunate that there is already an app being heavily developed by Matthew Calderolla, which I think would likely provide much the same function as this app.<br><br>
+
+                    <h2>Guarav Jha</h2>
+                https://www.codermerlin.com/users/gaurav-jha/Digital%20Portfolio/CS-III/Projects/Business%20Plan/index.html<br>
+
+                Messing with NFC tags seems pretty neat, but I don't think this would last long. NFC is great, but it isn’t exactly hard to program an NFC tag. I would love to just mess around with them, and if it was something which was just available as a cheap addition to something like a business card I think it would be pretty neat, but as a standalone card I think it would be kinda odd.<br><br>
+
+                    <h2><b>Nimo Ohayan-Rozanes</b></h2>
+                https://www.codermerlin.com/users/nimrod-ohayon-rozanes/Digital%20Portfolio/CS-III/Projects/Business%20Plan/index.html<br>
+
+                This seems like a pretty neat idea, and making an ev seems like a fun, practical challenge. Even if this isn’t something that could sell, it would be cool if you could sell a package and firmware which turns any motorcycle into an ev. I think this is a fun idea, and I already know Nimo, so I think it would be fun.
+
+           
+        </div>
+
+
+       
+
+    </body>
+</html>

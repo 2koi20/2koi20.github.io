@@ -91,59 +91,67 @@
         </div>
 -->
         <header>
-            <nav id="title" onclick="send('poj', 'index.html')" style=" text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">back to home
+            <nav id="title" onclick="send('poj', 'CS-III/Projects/Optimal Sort.html')" style=" text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">back to home
                 <div id="indicator"></div>
             </nav>
-            <nav id="switch" onclick="essaySwitch(); cycleE(1);" style="top: unset;bottom:5%; text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">switch projects
+            <nav id="switch" onclick="essaySwitch(); cycleE(1);" style="top: unset;bottom:5%; text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">switch gantt/info
                 <div id="switchx"></div>
             </nav>
         </header>
         
-        <div class="centralBox optimalSort Box1" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
-            <h1>gantt chart</h1><br>
-            <img style="height:100%;  top: 0; position: relative; " src="gantt.pdf" alt="flowchart">
-            
-        </div>
-        <div class="centralBox optimalSort Box2 setup" onclick="nextEPage(2)" id="Box2" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+        <div class="centralBox optimalSort Box1" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="width:40%; left: calc((100vw - 40vw)/2); right:  calc((100vw - 40vw)/2);background-color: #fff; color: #292929; font-family: Arial; font-size: 11pt;" >
+            <h1>UltraLight Transport</h1><br>
+            <img style="width:90%;  top: 0; position: relative; " src="gantt.jpg" alt="flowchart">
             
         </div>
 
 
-
-        <div class="centralBox sorties Box1 nextsay" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="color: #292929; background-color: #fff; font-family: Arial; font-size: 11pt;" >
+        <div class="centralBox sorties Box1 nextsay" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="color: #fff; background-color: #292929; font-family: Arial; font-size: 11pt;" >
             
-            <h1>bubble sort</h1><h2>github <a href="https://github.com/2koi20/bubblesort">here<br></a></h2>
-            <h2>sheet can be found <a href="https://docs.google.com/spreadsheets/d/1nrQc6wkkn0zeEvmKO6jxBwihhyACoQkL5-fS4HElApU/edit?usp=sharing">here<br></a></h2>
-            <img class="border" style="height:35%;  top: 0; position: relative; " src="bubblechart.png" alt="Bubble Sort - Graph">
-            <p style="padding:1rem 10%; text-align: justify;">As is illustrated in the graph, when dealing with ordered/presorted lists, no matter the size, bubblesort does not need to perform any operations, thus it only needs one iteration through the file, and takes a relatively short amount of time. However when dealing with a reversed list, it needs to traverse and swap around wordcount! number of times, the max amount of times it can need to. With a random sort, many of the words which belong at the start of the list still likely will end up at the end of the list, resulting in bubblesort needing to iterate through the majority of the wordcount! number of times, because wordcount! is wordcount + wordcount-1 + wordcount-2 ... etc and with random, it still needs to do the first couple of wordcount iterations, resulting in the random times being so close to the reverse times. </p> 
+            <h1>identity</h1><h3>UltraLight Transport manufactures the lightest 100 watt electric vehicle on the market, while simultaneously providing high quality steel construction.</h3>
+            
         </div>
-        
 
-        <div class="centralBox sorties Box2 setup nextsay" onclick="nextEPage(2)" id="Box2" onload="checkOverlap()" style="color: #292929; background-color: #fff; font-family: Arial; font-size: 11pt;" >
-            <h1>insertion sort</h1><h2>github <a href="https://github.com/2koi20/insertionsort">here<br></a></h2>
-            <h2>sheet can be found <a href="https://docs.google.com/spreadsheets/d/1OXB4Vf3gBCyyPXi1Qc4bvyXqTnxMzZMPV0rNpBP2umU/edit?usp=sharing">here<br></a></h2>
-            <img class="border" style="height:35%;  top: 0; position: relative; " src="insertionchart.png" alt="Insertion Sort - Graph">
-            <p style="padding:1rem 10%; text-align: justify;">While like bubble sort, insertion sort doesnt need to do anything for an ordered list, resulting in similar times for ordered list, and also similar results for reversed, due to the nature of reversing the list forcing bubble and insertion sort to perform similar actions to undo the reversing, with how both swap with indexes that are next to each other. With random lists however insertions sorts' ability to iterate back as it sorts allows it to move elements back to their proper location as it traverses rather than only moving forward and having to iterate over and over like bubble sort, resulting in a faster time for random sorts.</p>
+        <div class="centralBox sorties Box2 nextsay setup" onclick="nextEPage(2)" id="Box2" onload="checkOverlap()" style="color: #fff; background-color: #292929; font-family: Arial; font-size: 11pt;" >
+            
+            <h1>problem</h1><h3>There is a lack of easily portable electric transport options in the consumer market. The most portable electric options are electric skateboards, which are still rather large, and have grip tape which impedes portability. Other options such as electric scooters and bikes are even larger, and often have the risk of being stolen.</h3>
+            
         </div>
-       
-        <div class="centralBox sorties Box3 setup nextsay" onclick="nextEPage(3)" id="Box3" onload="checkOverlap()" style="color: #292929; background-color: #fff; font-family: Arial; font-size: 11pt;" >
-            <h1>selection sort</h1><h2>github <a href="https://github.com/2koi20/selectionsort">here<br></a></h2>
-            <h2>sheet can be found <a href="https://docs.google.com/spreadsheets/d/17Bp3A1DhkoGIayqYlp12G7WQlpYIs6XDOUYWhSGczto/edit?usp=sharing">here<br></a></h2>
-            <img class="border" style="height:35%;  top: 0; position: relative; " src="selectionchart.png" alt="Selection Sort - Graph">
-            <p style="padding:1rem 10%; text-align: justify;">Unlike the other two sorts, selection sort need to iterate through each element whenever it looks at one element in order to find the smallest, so even on the ordered list it takes a relatively long time. However this means that it solves the rest of the files with similar amounts of time, due to this finding of the smallest value having to iterate over a similar number of values no matter where the smallest is, resulting in a similar time for all files.</p>
+
+        <div class="centralBox sorties Box3 nextsay setup" onclick="nextEPage(3)" id="Box3" onload="checkOverlap()" style="color: #fff; background-color: #292929; font-family: Arial; font-size: 11pt;" >
+            
+            <h1>solution</h1><h3>The Electric Rollerblade is far smaller and more compact than any other option, while maintaining the comfort of travel in skateboards and scooters through the use of suspension allowing it to stand out from any other electric rollerblades on the market.</h3>
+            
         </div>
-        
 
-           
+        <div class="centralBox sorties Box4 nextsay setup" onclick="nextEPage(4)" id="Box4" onload="checkOverlap()" style="color: #fff; background-color: #292929; font-family: Arial; font-size: 11pt;" >
+            
+            <h1>target market</h1><h3>Lightspeed Transport primarily targets high-school to college students, who are interested in products such as electric skateboards, scooters, or bikes, for short distance transport via sidewalks.</h3>
+            
+        </div>
 
+        <div class="centralBox sorties Box5 nextsay setup" onclick="nextEPage(5)" id="Box5" onload="checkOverlap()" style="color: #fff; background-color: #292929; font-family: Arial; font-size: 11pt;" >
+            
+            <h1>competition</h1><h3>Our primary competition is electric skateboards and electric scooters, as well as a very small amount of electric rollerblades, however our rollerblades should be price-competitive, and provide a unique experience, as well as improved maneuverability compared to skateboards.</h3>
+            
+        </div>
 
-           
+        <div class="centralBox sorties Box6 nextsay setup" onclick="nextEPage(6)" id="Box6" onload="checkOverlap()" style="color: #fff; background-color: #292929; font-family: Arial; font-size: 11pt;" >
+            
+            <h1>revenue streams</h1><h3>Etsy and Kickstarter Online Sales will be the primary revenue source, as well as some initial investment by group members.</h3><h1>marketing</h1><h3>Lightspeed Transport will primarily advertise via Eskate forums and Rollerblading forums as well as through youtube targeted ads on electric skateboarding videos.</h3>
+            
+        </div>
 
-           
+        <div class="centralBox sorties Box7 nextsay setup" onclick="nextEPage(7)" id="Box7" onload="checkOverlap()" style="color: #fff; background-color: #292929; font-family: Arial; font-size: 11pt;" >
+            
+            <h1>expenses</h1><h3>Investment for the initial prototype will need to be found as well as for advertising on youtube and kickstarter.
+            </h3>
+            <h1>team/key roles</h1>
+            <h3>Currently, the only role is the initial group member, Khoi Pham, in the future a marketing lead will be needed as well as a CAD artist and fabrication lead.</h3>
+            <h1>milestones</h1>
+            <h3>As the prototype is mechanically finished, the programming and tuning will be initiated as well as starting the advertising and kickstarter campaign.</h3>
+            
+        </div>
 
-
-
-
-           
     </body>
 </html>

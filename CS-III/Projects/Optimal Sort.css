@@ -210,7 +210,10 @@ nav a:nth-child(6):hover ~ #indicator {
     background: linear-gradient(130deg, #ffa0c5, #c095e4);
 
 }
-
+.disabled {
+    pointer-events: none;
+    transition: 800ms !important;
+}
 .centralBox {
     display: inline-block;
     position: fixed;
@@ -226,7 +229,7 @@ nav a:nth-child(6):hover ~ #indicator {
     border-radius: 5%;
     box-sizing: border-box;
     font-family: arial;
-    font-size: 11vw;
+    font-size: 11px;
     background-color: rgba(240,240,240,1.0);
     transition: 700ms, z-index 0ms;
     transition-timing-function: ease-out;
@@ -246,7 +249,20 @@ nav a:nth-child(6):hover ~ #indicator {
     transform:scale(0.4, 0.5) translate(-185%, 40%);
     z-index: -10;
 }
-
+.centralBox.trans {
+    transition-timing-function: linear;
+    transform:scale(5, 5) translate(0);
+    z-index: 121;
+    transition: 800ms;
+    
+}
+.centralBox.closetrans {
+    padding: .8rem 2rem;
+    transform:scale(3, 3) translate(0) !important;
+    z-index: 121;
+    transition:0ms !important;
+    
+}
 .centralBox.setup {
     opacity:50%;
     transform:scale(0.4, 0.5) translate(185%, 40%);
@@ -259,7 +275,36 @@ nav a:nth-child(6):hover ~ #indicator {
     transition-timing-function: ease-in;
     
 }
+.centralBox.corner {
+    padding: .8rem 2rem;
+    transform:scale(1, 1) translate(155%, 107%) rotate(-20deg);
+    z-index: 100;
+    transition: 200ms;
+    transform-origin: 0 0;
 
+}
+.centralBox.corner.cornerBox2 {
+    padding: .8rem 2rem;
+    transform:scale(1, 1) translate(165%, 90%) rotate(-20deg);
+    z-index: 99;
+    opacity: 90%;
+    transition: 200ms;
+    transform-origin: 0 0;
+
+}
+.centralBox.corner:hover {
+    transform:scale(1.1, 1.1) translate(144%, 94%) rotate(-15deg);
+    transform-origin: 0 0;
+    transition: 200ms;
+    z-index: 0;
+}
+.centralBox.corner.cornerBox2:hover {
+    transform:scale(1.1, 1.1) translate(149%, 81%) rotate(-15deg);
+    transform-origin: 0 0;
+    transition: 200ms;
+    z-index: -1;
+
+}
 img {
     object-fit: cover;
     top: -2.5%

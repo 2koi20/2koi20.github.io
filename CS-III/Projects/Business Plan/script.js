@@ -276,20 +276,15 @@ async function recieve() {
     var pass = searchy.get("ID84");
     if (pass != null) {
         if (pass == "ese") {
-            document.getElementById("cornerBox").style.zIndex=-100;
+            document.getElementById("cornerBox").style.zIndex=0;
             retransition("Boxfing", "retrans");
-            $("#Boxfing").addClass("disabled");
             await timer(800);
-            $("#Boxfing").removeClass("disabled");
             document.getElementById("cornerBox").style.zIndex=100;
             
         }
         if (pass == "poj") {
-            document.getElementById("Boxfing").style.zIndex=-1000;
+            document.getElementById("Boxfing").style.zIndex=0;
             retransition("cornerBox", "corner");
-            $("#cornerBox").addClass("disabled");
-            await timer(800);
-            $("#cornerBox").removeClass("disabled");
             document.getElementById("Boxfing").style.zIndex=120;
             
         }
