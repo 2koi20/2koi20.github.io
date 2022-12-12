@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AI Sentience</title>
+        <title>Bias</title>
         <link rel="icon" type="image/png" href="../../favicon.png">
         <link href = "fingerprinting.css" rel = "stylesheet" type = "text/css">
         <style>
@@ -31,17 +31,17 @@
              }
          }
         </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+        </script>
         <script src="../../script.js">
-         
-         </script>
-         <script>
-          toggled = true;
-          toggled2 = false;
-         </script>
+        </script>
+        <script>
+         toggled = true;
+         toggled2 = true;
+        </script>
     </head>
    
-    <body id="hippy" style="background-color: #f0f0f0; " onload="checkSize();toggled = true;">
+    <body id="hippy" style="background-color: #f0f0f0; " onload="checkSize();">
          
         <header>
             <nav id="title" onclick="send('ese', 'index.html')" style=" text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">back to home
@@ -84,52 +84,52 @@
 
            <!-- essay change (fprint to ai) -->
 
-           <div class="centralBox ai Box1" onclick="nextEPage(1)" id="Box6" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+           <div class="centralBox ai Box1 nextsay" onclick="nextEPage(1)" id="Box6" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
                <img style="width:110%; position: relative; left: -5%; top: 2.5%;" src="ai-1.png" alt="Python Code/Bitmap Converter">
                
            </div>
 
-           <div class="centralBox setup ai Box2" onclick="nextEPage(2)" id="Box7" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+           <div class="centralBox setup ai Box2 nextsay" onclick="nextEPage(2)" id="Box7" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
                <img style="width:110%; position: relative; left: -5%;" src="ai-2.png" alt="Python Code/Bitmap Converter">
                
                
            </div>
 
 
-           <div class="centralBox setup ai Box3" onclick="nextEPage(3)" id="Box8" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+           <div class="centralBox setup ai Box3 nextsay" onclick="nextEPage(3)" id="Box8" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
                <img style="width:110%; position: relative; left: -5%;" src="ai-3.png" alt="Python Code/Bitmap Converter">
                
                
            </div>
-           <div class="centralBox setup ai Box4" onclick="nextEPage(4)" id="Box9" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+           <div class="centralBox setup ai Box4 nextsay" onclick="nextEPage(4)" id="Box9" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
                <img style="width:110%; position: relative; left: -5%;" src="ai-4.png" alt="Python Code/Bitmap Converter">
                
                
            </div>
            <!-- essay change (ai to bias) -->
-           <div class="centralBox bias Box1 nextsay" onclick="nextEPage(1)" id="Box10" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+           <div class="centralBox bias Box1" onclick="nextEPage(1)" id="Box10" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
                <img style="width:110%; position: relative; left: -5%; top: 2.5%;" src="REal Bias ese-1.png" alt="Python Code/Bitmap Converter">
                
            </div>
 
-           <div class="centralBox setup bias Box2 nextsay" onclick="nextEPage(2)" id="Box11" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+           <div class="centralBox setup bias Box2" onclick="nextEPage(2)" id="Box11" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
                <img style="width:110%; position: relative; left: -5%;" src="REal Bias ese-2.png" alt="Python Code/Bitmap Converter">
                
                
            </div>
 
 
-           <div class="centralBox setup bias Box3 nextsay" onclick="nextEPage(3)" id="Box12" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+           <div class="centralBox setup bias Box3" onclick="nextEPage(3)" id="Box12" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
                <img style="width:110%; position: relative; left: -5%;" src="REal Bias ese-3.png" alt="Python Code/Bitmap Converter">
                
                
            </div>
-           <div class="centralBox setup bias Box4 nextsay" onclick="nextEPage(4)" id="Box13" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+           <div class="centralBox setup bias Box4" onclick="nextEPage(4)" id="Box13" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
                <img style="width:110%; position: relative; left: -5%;" src="REal Bias ese-4.png" alt="Python Code/Bitmap Converter">
                
                
            </div>
-           <div class="centralBox setup bias Box5 nextsay" onclick="nextEPage(5)" id="Box14" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
+           <div class="centralBox setup bias Box5" onclick="nextEPage(5)" id="Box14" onload="checkOverlap()" style="background-color: #292929; color: #f0f0f0; font-family: Arial; font-size: 11pt;" >
                <img style="width:110%; position: relative; left: -5%;" src="REal Bias ese-5.png" alt="Python Code/Bitmap Converter">
                
                
