@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Journals</title>
+        <link href = "index.css" rel = "stylesheet" type = "text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+         body {
+             animation: fadeInAnimation ease .5s;
+             animation-iteration-count: 1;
+             animation-fill-mode: forwards;
+         }
+         @keyframes fadeInAnimation {
+             0% {
+                 opacity: 0;
+             }
+             100% {
+                 opacity: 1;
+             }
+         }
+         @keyframes fadeOutAnimation {
+             0% {
+                 opacity: 1;
+             }
+             100% {
+                 opacity: 0;
+             }
+         }
+        </style>
+        
+        <script src="script.js">
+        </script>
+    </head>
+   
+    <body id="hippy" onload="checkSize();">
+<!--
+        <div class="aside-sticky">
+            
+            <div class="card-scene-wrapper" style="opacity: 1;">
+                <div class="card-scene" style="transform: rotateX(0.0827848rad) rotateY(-0.598887rad);">
+                    <div class="card-overlay" style="opacity: 0.95;">
+                        <div class="card-code" style="transform: translate3d(0px, -1380px, 0px);">
+                            <div class="card-code">
+                                <pre>  {
+    id: <span class="code-string">'ic_hiahsdfUNihkasdf879'</span>,
+    object: <span class="code-object">issuing_card</span>,
+    authorization_controls: {
+      allowed_categories: <span class="code-categories code-string" style="font-weight: 700;">['gas', 'parking']</span>,
+      blocked_categories: <span class="code-null code-blocked">null</span>,
+      currency: <span class="code-currency code-string" style="font-weight: 700;">'gbp'</span>,
+      max_amount: <span class="code-number code-amount" style="font-weight: 700;">10000</span>,
+      max_approvals: <span class="code-null">null</span>
+    },
+    billing: {
+      address: {
+        city: <span class="code-string">'beverly hills'</span>,
+        country: <span class="code-string">'US'</span>,
+        line1: <span class="code-string">'123 fake st'</span>,
+        line2: <span class="code-null">null</span>,
+        postal_code: <span class="code-number">90210</span>,
+        state: <span class="code-string">'CA'</span>
+      }
+    },
+    brand: <span class="code-string code-brand" style="font-weight: 700;">'mastercard'</span>,
+    cardholder: <span class="code-null">null</span>,
+    created: <span class="code-number">1528481070</span>,
+    currency: <span class="code-string">'usd'</span>,
+    exp_month: <span class="code-number">12</span>,
+    exp_year: <span class="code-number">2022</span>,
+    last4: <span class="code-number">1984</span>,
+    livemode: <span class="code-number">false</span>,
+    metadata: {
+    },
+    name: <span class="code-string">'Jenny Rosen'</span>,
+    shipping: <span class="code-null">null</span>,
+    status: <span class="code-string code-status" style="font-weight: 700;">'active'</span>,
+    type: <span class="code-string code-type" style="font-weight: 700;">'virtual'</span>
+  }
+                                </pre>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <canvas width="1200" height="1200" style="width: 600px; height: 600px;"></canvas></div>
+        </div>
+-->
+        <header>
+            <nav id="title" onclick="send('poj', 'CS-III/Projects/Optimal Sort.html')" style=" text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;">back to home
+                <div id="indicator"></div>
+            </nav>
+
+        </header>
+        
+ 
+
+        <div class="centralBox sorties Box1" onclick="nextEPage(1)" id="Box1" onload="checkOverlap()" style="color: #292929; background-color: #fff; font-family: Arial; font-size: 11pt;" >
+            
+           <h1>Journal</h1>
+           
+	   <br><h2>10-Feb-2023</h2>
+	   <br><h2>Technical challenges</h2><br>
+	   <p>Not much was worked on this week, as all of our schedules were pretty full, so we didn’t get any challenges this week. </p>
+	   <br><h2>Scheduling challenges</h2><br>
+	   <p>We didn't have any scheduling problem as we were priorly were ahead of schedule, therefore we have had plenty of time between our next deadline and now to iterate and develop before the deadline. </p>
+	   <br><h2>Interpersonal challenges</h2><br>
+	   <p>We have not had any interpersonal challenges this week, most members aren’t working together in integration yet, so interpersonal conflict is minimal.</p>
+
+	   <br><h2>27-Jan-2023</h2>
+	   <br><h2>Technical challenges</h2><br>
+	   <p>Not much was worked on this week, as all of our schedules were pretty full, so we didn’t get any challenges this week. </p>
+	   <br><h2>Scheduling challenges</h2><br>
+	   <p>We didn't have any scheduling problem as we were priorly were ahead of schedule, therefore we have had plenty of time between our next deadline and now to iterate and develop before the deadline. </p>
+	   <br><h2>Interpersonal challenges</h2><br>
+	   <p>We have not had any interpersonal challenges this week, most members aren’t working together in integration yet, so interpersonal conflict is minimal.</p>
+
+           <br><h2>20-Jan-2023</h2>
+	   <br><h2>Technical challenges</h2><br>
+	   <p>One technical challenge this week has been in keeping the base of the rollerblade static, as when the spring is used, it applies a bending force to the base, pulling it into a banana shape, which is pretty bad for out calculations with the bend sensors. Other than that, our arduino nano is not communication with the laptop to flash, however, this has been solved by rewriting the code, and fixing some bugs. </p>
+	   <br><h2>Scheduling challenges</h2><br>
+	   <p>As with before, we are still ahead of schedule, thus we don’t currently have any scheduling challenges. Some of our issues need to be added to the github, but that’s about it.</p>
+	   <br><h2>Interpersonal challenges</h2><br>
+	   <p>We have not had any more interpersonal challenges this week, most members aren’t working together in integration yet, so interpersonal conflict is minimal.  We are discussing ome options for the basic code, with how to communicate between shoes, and other details, but no real conflicts have happened.</p>
+	   <br>
+           <h1>Journal</h1>
+           <br><h2>9-Jan-2023</h3>
+               <br><h2>Technical challenges</h2><br>
+               <p>The main technical challenge this week was in sourcing materials for creating the rollerblade, namely the aluminum. A design challenge we had was making the spring of the electrical roller blade adjustable to account for various weights of the users. This occurs as we had planned the roller blades to have suspension for us to navigate and turn easier while having the roller blade being soft on our feet. However, people that are heavier than the certain weight cannot properly use the roller blade, therefore, we had to redesign some parts of the design to make it adjustable. </p>
+               <br><h2>Scheduling challenges</h2><br>
+               <p>We didn't have any scheduling problem as we were priorly were ahead of schedule, therefore we have had plenty of time between our next deadline and now to iterate and develop before the deadline. </p>
+               <br><h2>Interpersonal challenges</h2><br>
+               <p>We have not had any interpersonal challenges this week, most members aren’t working together in integration yet, so interpersonal conflict is minimal.</p>
+               
+           <br><h2>2-Jan-2023</h3>
+               <br><h3>Technical challenges</h3><br>
+               <p>Creating the initial design and BOM for the project has gone smoothly, with the main hiccup being manufacturing. The CNC Router which we have been using is a relatively weak one, and as such, requires extra attention when CNC-ing aluminum. Also, the bullet connectors which come on the motor do not come on the VESC, however luckily this issue has been rectified because I happen to already have the required connectors, so they just needed to be soldered on, which I have now done. As of now, the main challenge will be developing the arduino code to send data to the VESC and auto-balance.</p>
+               <br><h3>Scheduling challenges</h3><br>
+               <p>Some required parts have yet to arrive, causing some production delays, however in the meantime, we have continued production and wiring with the motor and VESC which have arrived. Another hiccup is the production of the sheet metal parts, which happen to be rather hard to manufacture, and time-consuming, so manufacturing of the parts are a bit behind. Other than these issues, code generation has been proceeding smoothly as well as motor setup.</p>
+               <br><h3>Interpersonal challenges</h3><br>
+               <p>Another team member and I have gotten into an argument about material thickness for the skate chassis, about both material choice and thickness. This issue has been rectified through using CAD to simulate the forces applied, thus defining the proper material and thickness. Another issue has been with material choice for springs, and whether or not to include them. This issue has been resolved through discussion of the pros and cons, and we are going to proceed with plans for springs, however they will be pushed back until after the code is ready for testing to expedite production.</p>
+           <br><h3>Software Development Engineer </h3><br>
+           <p>The Software Development Engineer develops the software of the project, and in our case will write the arduino code which will autobalance in unison with the VESC. MY suitability to the role is that I have previous experience with arduino, and also with the VESC project, thus I will be able to efficiently program the arduino. One challenge we may face with software development is adapting to changes in design. Changes in design will force the autobalancing to be changed to fit the changed is design, as well as the likely differences in driver sizes/distribution.</p>
+           <br><h3>QA Engineer </h3><br>
+           <p>The QA Engineer will test the system, and suggest relevant changes to the software engineer. They will be responsible for both the testing of the physical and software systems, as well as intercompatibility. I am personally suitable for this role because I have experience with rollerblades and self-balancing vehicles. I also have designed the majority of the mechanics, so I know what the majority of the proper functions are. One potential problem is a major issue with critical parts such as the VESC or motor. If either of these parts are broken it will add a minimum of 1 week to the total assembly time.</p>
+
+           <br><h3>Product Manager </h3><br>
+           <p>A product manager is a person who is responsible for the development and success of a product. The product manager works closely with the development team to define the features and requirements of the product, and to ensure that the product aligns with the overall goals. The product manager may also be responsible for market research. To be effective, a product manager should have a strong understanding of the market and the competition, as well as the ability to communicate effectively with a variety of development teams and workers as well as leading cross-functional teams. I will personally be suitable for this because I know the requirements of the project well, as well as knowing the rollerblading experience well. A potential issue is in the poor setting of requirements leading to a subpar project, leading to a time increase. This can be overcome by planning alongside other team members to ensure the reliability of the goals.</p>
+           <br><h3>Project Manager</h3><br>
+           <p>A project manager is a person who is responsible for planning, organizing, and managing resources in order to successfully complete a project. The project manager will be responsible for creating timelines and assigning tasks to team members, and ensuring that the project stays on track and within budget. In order to be effective, a project manager must have strong leadership and communication skills, as well as the ability to work effectively with a team and handle multiple tasks and responsibilities concurrently. I will not be very suitable to this role, because I have poor time-management skills, and likely will procrastinate. Dealing with the different personalities on the team is one of the major efforts needed to be put forth in order to make this successful, and good interpersonal skill are required.</p>
+           <br><h3>Release Engineer</h3><br>
+           <p>A release engineer is a person who is responsible for the building, testing, and deploying of software releases. This may include automating the release process, setting up and maintaining build and test environments, and coordinating with development and QA engineer to ensure that releases are stable and of high quality. In addition, the release engineer may be responsible for managing source code control, branching and merging strategies, and other activities related to version control. To be effective, a release engineer should have strong technical skills, including familiarity with a variety of programming languages and tools, as well as excellent problem-solving and communication skills.I will personally not be suited to this role as other team members are more experienced and well versed in github as I am, and one major issue which may occur due to this is the loss of data in the repo, leading to further time losses.The solution to this is proper precautions and backups when interacting with the repo, as well as choosing the right person for the job.</p>
+
+
+        </div>
+
+
+    </body>
+</html>

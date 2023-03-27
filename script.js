@@ -5,6 +5,7 @@ $(window).on('load', function() {
 });
 var indice = 1;
 var toggled = false;
+var toggled2 = false;
 var timerActivity = false;
 async function checkOverlap() {
     var navvy = document.getElementById("topNav")
@@ -223,17 +224,30 @@ async function essaySwitch() {
             window.history.replaceState({}, document.title, window.location.href.replace("Fingerprints.html", "AI%20Sentience.html"));
             document.title = "AI Sentience";
     } else {
-
-        $(".ai").toggleClass("nextsay");
-        await timer(800);
-        $(".fingerprinting").toggleClass("nextsay");
-        toggled = false;
-        document.title = "Fingerprints";
-        window.history.replaceState({}, document.title, window.location.href.replace("AI%20Sentience.html", "Fingerprints.html"));
+        if (toggled2 == false) {
+            $(".ai").toggleClass("nextsay");
+            await timer(800);
+            $(".bias").toggleClass("nextsay");
+            toggled2 = true;
+            document.title = "Bias";
+            window.history.replaceState({}, document.title, window.location.href.replace("AI%20Sentience.html", "Decision%20Making.html"));
+        } else {
+            $(".bias").toggleClass("nextsay");
+            await timer(800);
+            $(".fingerprinting").toggleClass("nextsay");
+            toggled = false;
+            toggled2 = false;
+            document.title = "Fingerprints";
+            window.history.replaceState({}, document.title, window.location.href.replace("Decision%20Making.html", "Fingerprints.html"));
+        }
     }
 
 }
+async function set(tog, t2og) {
+    toggled = tog;
+    toggled2 = t2og;
 
+}
 async function nextEPage(elm) {
     if (timerActivity == false) {
         timerActivity = true;
